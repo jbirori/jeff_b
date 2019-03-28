@@ -9,7 +9,14 @@ class App extends Component {
         <Lamp>
           <LampChord />
           <LampShade />
-          <LightBeam />
+          <LightBeam>
+            <TextSection>
+              <Title> Jeff B </Title>
+              <ProjectLink> Dial Up </ProjectLink>
+              <ProjectLink> Rogue Agency </ProjectLink>
+              <ProjectLink> Lyrical Lemonade </ProjectLink>
+            </TextSection>
+          </LightBeam>
         </Lamp>
       </div>
     );
@@ -20,14 +27,14 @@ const Lamp = styled.div`
   position: fixed;
   top: 0;
   width: 100vw;
-  animation: swing 4s infinite;
+  animation: swing 6s infinite;
   transform-origin: top;
   animation-timing-function: ease-in-out;
 
   @keyframes swing {
-    0% {transform: rotate(-35deg);}
-    50% {transform: rotate(35deg);}
-    100% {transform: rotate(-35deg);}
+    0% {transform: rotate(-30deg);}
+    50% {transform: rotate(30deg);}
+    100% {transform: rotate(-30deg);}
   }
 `;
 
@@ -51,12 +58,66 @@ const LampChord = styled.div`
 `;
 
 const LightBeam = styled.div`
-  border-bottom: 150vh solid red;
+  position: relative;
+  border-bottom: 150vh solid #F9E0D9;
   border-left: 30vw solid transparent;
   border-right: 30vw solid transparent;
   height: 0;
   margin: 0 auto;
   width: 75px;
+`;
+
+const TextSection = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vw;
+  padding-top: calc(85px + 15vh);
+  mix-blend-mode: difference;
+  background-color: transparent;
+  animation: anti-swing 6s infinite;
+  transform-origin: top;
+  animation-timing-function: ease-in-out;
+
+  @keyframes anti-swing {
+    0% {
+      transform: rotate(30deg);
+
+    }
+    50% {transform: rotate(-30deg);}
+    100% {transform: rotate(30deg);}
+  }
+`;
+
+const Title = styled.h1`
+  position: relative;
+  text-align: center;
+  margin-top: 3%;
+  margin-bottom: 5%;
+  color: #F9E0D9;
+  font-size: 5rem;
+
+  @media only screen and (max-width: 900px) {
+    margin-top: 7%;
+    margin-bottom: 10%;
+  }
+`;
+
+const ProjectLink = styled.p`
+  position: relative;
+  text-align: center;
+  margin: 5%;
+  color: #F9E0D9;
+  font-size: 3rem;
+  font-weight: 700;
+  cursor: pointer;
+  z-index: 5;
+
+  @media only screen and (max-width: 900px) {
+    margin: 10%;
+    font-size: 2rem;
+  }
 `;
 
 export default App;
