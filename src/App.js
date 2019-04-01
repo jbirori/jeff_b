@@ -142,7 +142,7 @@ const Title = styled.h1`
   margin-top: 3%;
   margin-bottom: 5%;
   color: #F9E0D9;
-  font-size: 5rem;
+  font-size: 6rem;
 
   @media only screen and (max-width: 600px) {
     margin-top: 7%;
@@ -182,7 +182,7 @@ const ModalButton = styled.div`
   cursor: pointer;
   z-index: ${props => props.zIndex || 10};
 
-  animation: rotate 3s infinite;
+  animation: rotate 5s infinite;
   animation-timing-function: linear;
 
   @keyframes rotate {
@@ -257,7 +257,6 @@ const Contact = styled.div`
 
 const Icon = styled.img`
   height: 1.2em;
-  filter: invert(1);
   margin: 0px 4px;
 `;
 
