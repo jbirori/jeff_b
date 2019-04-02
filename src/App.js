@@ -8,7 +8,7 @@ class App extends Component {
     this.state = {
       modalOpen: false,
       about: "who is jeff ",
-      work: "jeff's work ",
+      work: "jeff's  work  ",
       radius: 40
     }
 
@@ -37,7 +37,7 @@ class App extends Component {
         <ModalButton radius={this.state.radius} zIndex={11} onClick={this.openCloseModal}>
           <CircularText radius={this.state.radius}>
             {this.state.about.split("").map((letter, index) => (
-              <LetterCurve height={this.state.radius} origin={index*(360/this.state.work.length)}> {letter} </LetterCurve>
+              <LetterCurve height={this.state.radius} origin={index*(360/this.state.about.length)}> {letter} </LetterCurve>
             ))}
           </CircularText>
         </ModalButton>
@@ -187,8 +187,8 @@ const ModalButton = styled.div`
 
   @keyframes rotate {
     0% {transform: rotate(0deg);}
-    50% {transform: rotate(180deg);}
-    100% {transform: rotate(360deg);}
+    50% {transform: rotate(-180deg);}
+    100% {transform: rotate(-360deg);}
   }
 `;
 
