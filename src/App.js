@@ -8,7 +8,7 @@ class App extends Component {
     this.state = {
       modalOpen: false,
       about: "who is jeff ",
-      work: "jeff's  work  ",
+      work: "client work ",
       radius: 40
     }
 
@@ -58,7 +58,7 @@ class App extends Component {
               Lets work. <br/><br/><br/><br/>
               <Contact>
                 <a href="https://www.instagram.com/jeff.bi/"><Icon src="assets/insta.png" /></a>
-                <a href="mailto:jeffbirori@gmail.com?subject=Lets work"><p>Email</p></a>
+                <a href="mailto:jeffbirori@gmail.com?subject=Lets work"><Icon src="assets/email.png" /></a>
                 <a href="https://github.com/jbirori"><Icon src="assets/github.png" /></a>
               </Contact>
             </Description>
@@ -256,7 +256,7 @@ const Contact = styled.div`
 `;
 
 const Icon = styled.img`
-  height: 1.2em;
+  height: 1.8em;
   margin: 0px 4px;
 `;
 
