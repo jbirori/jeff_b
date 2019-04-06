@@ -28,9 +28,10 @@ class App extends Component {
           <LightBeam>
             <TextSection>
               <Title> Jeff B </Title>
-              <ProjectLink href="http://dialupstuff.com/"> Dial Up </ProjectLink>
-              <ProjectLink href="https://www.rogueagency.us/"> Rogue Agency </ProjectLink>
-              <ProjectLink href="https://www.lyricallemonade.com/"> Lyrical Lemonade </ProjectLink>
+              <ProjectLink href="http://dialupstuff.com/" target="_blank"> Dial Up </ProjectLink>
+              <ProjectLink href="https://www.rogueagency.us/" target="_blank"> Rogue Agency </ProjectLink>
+              <ProjectLink href="https://www.thesummersmash.com/" target="_blank"> Summer Smash </ProjectLink>
+              <ProjectLink href="https://www.lyricallemonade.com/" target="_blank"> Lyrical Lemonade </ProjectLink>
             </TextSection>
           </LightBeam>
         </Lamp>
@@ -118,7 +119,8 @@ const TextSection = styled.div`
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vw;
+  height: calc(100vh - 15vh - 85px);
+  overflow: scroll;
   padding-top: calc(85px + 15vh);
   mix-blend-mode: difference;
   background-color: transparent;
@@ -156,7 +158,7 @@ const ProjectLink = styled.a`
   display: block;
   text-decoration: none;
   text-align: center;
-  margin: 5%;
+  margin: 3%;
   color: #F9E0D9;
   font-size: 3rem;
   font-weight: 500;
@@ -164,7 +166,7 @@ const ProjectLink = styled.a`
   z-index: 5;
 
   @media only screen and (max-width: 600px) {
-    margin: 7%;
+    margin: 5%;
     font-size: 2rem;
     font-weight: 700;
   }
